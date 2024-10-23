@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h3>Khaatabook</h3>
+        <div>
+            <a href="/">Home</a>
+            <a href="/create">Create New Hisaab</a>
+        </div>
+
+    </nav>
+    <div class="hisabs">
+        <h3>You'r editing hisab of <%=filename%></h3>
+        <form action="/edithisab/<%=filename%>" method="post">
+            <textarea   name="data" ><%=data%></textarea>
+            <input type="submit" value="UPdate Hisab">
+        </form>
+        
+
+    </div>
+
+</body>
+</html>

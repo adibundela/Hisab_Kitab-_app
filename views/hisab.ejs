@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisab</title>
+    <link rel="stylesheet" href="/css/hisab.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h3>Khaatabook</h3>
+        <div>
+            <a href="/">Home</a>
+            <a href="/create">Create New Hisaab</a>
+        </div>
+
+    </nav>
+    <div class="hisabs">
+        <h3>Hisab of <%= filename.split('.')[0] %> Date</h3>
+
+        <p> <%= data %></p>
+
+        <a href="/edit/<%= filename %>">Edit</a>
+        
+    </div>
+</body>
+</html>

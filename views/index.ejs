@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Khatabook</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+   <main>
+        <nav class="navbar">
+            <h3>Khaatabook</h3>
+            <div>
+                <a href="/">Home</a>
+                <a href="/create">Create New Hisaab</a>
+            </div>
+
+        </nav>
+        <div class="hisabs">
+            <h3>Your Hisaab Kitaab</h3>
+            <% if(files.length>0){%> 
+                <% files.forEach((file) => { %>
+                    <div class="hisab" >
+                        <h3><a href="/showhisab/<%= file %>" ><%= file %></a></h3>
+                        <div>
+                            <a href="/edit/<%= file %>">edit</a>
+                            <a href="/delete/<%= file %>">delete</a>
+                        </div>
+                    </div>
+
+                <% } )%>
+                
+            <% } else {%>
+                <p> you did't have any hisaab Kitaab </p>
+            <% } %>
+
+        </div>
+
+        
+   </main>
+</body>
+</html>
